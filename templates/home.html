@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body onload="hideLoader()">
+    <!-- Loader -->
+    <div class="loader" id="loader">Loading...</div>
+
+    <!-- Main Content -->
+    <div class="content" id="content">
+        <h1>Caesar Cipher</h1>
+        <form method="post">
+            <label for="direction">Choose an action:</label>
+            <select name="direction" id="direction">
+                <option value="encode">Encode</option>
+                <option value="decode">Decode</option>
+            </select>
+            <br>
+            <label for="text">Enter your text:</label>
+            <input type="text" name="text" id="text" required>
+            <br>
+            <label for="shift">Shift number:</label>
+            <input type="number" name="shift" id="shift" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if result %}
+        <p class="result">Result: <span>{{ result }}</span></p>
+        {% endif %}
+    </div>
+
+    <script>
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

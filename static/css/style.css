@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+/* Loader Styles */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Additional global styles for centering */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Dela Gothic One', sans-serif;
+    background-color: #fdfdfd;
+}
+
+
+/* Hide main content by default */
+.content {
+    display: none;
+}
+
+/* Center the form on the viewport */
+.content {
+    display: flex;
+    justify-content: center; /* Align children horizontally in the center */
+    align-items: center;     /* Align children vertically in the center */
+    flex-direction: column;  /* Stack the children vertically */
+    min-height: 100vh;       /* Minimum height of 100% of the viewport */
+    width: 100%;             /* Full width to use all available horizontal space */
+    text-align: center;      /* Center-align the text for any direct children */
+    padding: 15px;           /* Add some padding to ensure there's space around the content */
+}
+
+/* Add some general styling to the form for a cleaner look */
+/* Style the form to be more attractive and centered */
+form {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: auto; /* Center the form horizontally */
+    padding: 3em; /* Add padding inside the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Shadow for depth */
+    border-radius: 15px; /* Rounded corners */
+    background: #fdfdfd; /* White background */
+    width: 60%; /* Increase the width of the form */
+    max-width: 600px; /* You can adjust this to set a specific max width */
+    min-width: 300px; /* You can adjust this to ensure a minimum width */
+}
+
+/* Adjust form elements to match the new form width */
+form input[type="text"],
+form input[type="number"],
+form select,
+form input[type="submit"] {
+    margin: 10px auto; /* Center within form */
+    display: block; /* Block level for full-width line */
+    width: 90%; /* Width relative to form width */
+    max-width: 500px; /* Adjust to fit within the form */
+}
+
+/* Style the input and select fields */
+form input[type="text"],
+form input[type="number"],
+form select {
+    padding: 0.5em; /* Add some padding inside the input fields */
+    border: 1px solid #ccc; /* A subtle border for the inputs */
+    border-radius: 4px; /* Rounded borders for the inputs */
+}
+
+/* Style the submit button to stand out */
+form input[type="submit"] {
+    width: 90%; /* Match the width of the input fields */
+    margin: 0.5em auto; /* Center the button horizontally */
+    background-color: #501fff; /* Primary color for submit button */
+    color: white; /* Text color for submit button */
+    padding: 0.7em 1em; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded borders for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for a smooth color change */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600
+    ;
+}
+
+/* Change submit button color on hover to indicate action */
+form input[type="submit"]:hover {
+    background-color: #e63946; /* A slightly darker shade on hover */
+}
+
+/* Optional: If you want to center the legend as well */
+legend {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Adjust the result display */
+.result {
+    text-align: center; /* Center-align the result text */
+    padding-top: 20px; /* Add some space above the result text */
+}
+
+.result span{
+    color: #501fff;
+}
+
+h1 {
+    margin-bottom: 2rem; /* Add some space below the heading */
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
